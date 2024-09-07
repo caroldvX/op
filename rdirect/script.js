@@ -5,7 +5,7 @@ window.onload = function() {
     
     setTimeout(function() {
       window.location.href = link;
-    }, 9990);
+    }, 999);
   }
   var referer = document.referrer;
 
