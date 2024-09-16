@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bSDXldIiYn3Q.css">
+    <link rel="stylesheet" href="css/DNS3C9gyB1Rq.css">
+    <link rel="shortcut icon" href="images/t47mHSyjVlf2.png">
+    <title>:: Shein Premium ::</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            height: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #202020;
+            width: 0;
+            transition: width 3s ease-in-out;
+        }
+        .message {
+            display: none;
+            margin-top: 5px;
+            font-size: 1.5em;
+            color: #202020;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/fuX92BgyVjSH.png" alt="Logo" width="250px">
+        <h1 class="carregandoCodigo">ENTRANDO...</h1>
+        <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+        </div><br>
+        <div class="message"><b>ACESSO LIBERADO ✅</b></div>
+    </div>
+
+    <script>
+        // Função para iniciar o redirecionamento
+        function redirectTime() {
+            setTimeout(() => {
+                window.location = "../sheinpremium";
+            }, 1000); // 1 segundo de delay após a mensagem
+        }
+
+        // Função para preencher a barra de progresso
+        function fillProgressBar() {
+            const progressBarFill = document.querySelector('.progress-bar-fill');
+            const message = document.querySelector('.message');
+
+            progressBarFill.style.width = '100%';
+
+            // Mostrar a mensagem e iniciar o redirecionamento após a barra preencher
+            setTimeout(() => {
+                message.style.display = 'block';
+                redirectTime();
+            }, 3000); // A duração deve ser igual ao tempo da animação da barra
+        }
+
+        // Inicia a animação da barra de progresso
+        window.onload = fillProgressBar;
+    </script>
+
+
+</body></html>
