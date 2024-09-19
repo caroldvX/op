@@ -21,14 +21,15 @@
         .container {
             position: relative;
             width: 90%; 
-            max-width: 600px; 
+            max-width: 300px; /* Largura máxima da container */
         }
         .progress-bar {
             width: 100%;
+            max-width: 350px; /* Largura máxima da barra */
             background-color: #fff;
             border: 3px solid #ccc;
-            height: 40px;
-            margin: 20px auto;
+            height: 2px; /* Aumentando a altura da barra */
+            margin: 6px auto; /* Margens menores para compactação */
             border-radius: 10px;
             overflow: hidden;
         }
@@ -42,19 +43,22 @@
         .message {
             display: none;
             margin-top: 5px;
-            font-size: 1.5em;
+            font-size: 1.2em; /* Tamanho de fonte ajustado para compactação */
             color: #555555;
         }
     
         @media (max-width: 600px) {
             .progress-bar {
-                height: 15px;
+                height: 25px; /* Ajusta a altura da barra em telas menores */
             }
             .message {
-                font-size: 1.2em;
+                font-size: 1em; /* Ajusta o tamanho da fonte em telas menores */
             }
         }
     </style>
+    
+    
+    
     
     
     
