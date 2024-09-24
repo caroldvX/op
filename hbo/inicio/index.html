@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bSDXldIiYn3Q.css">
+    <link rel="stylesheet" href="css/DNS3C9gyB1Rq.css">
+    <link rel="shortcut icon" href="images/ZNBeditada.png">
+    <title>:: OpinaPro ::</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('images/tvv6KunalCjt.png'); /* Caminho da imagem de fundo */
+            background-size: cover; /* Cobre toda a área */
+            background-position: center; /* Centraliza a imagem */
+            text-align: center; 
+        }
+        .container {
+            position: center;
+            width: 190%; 
+            max-width: 800px; /* Largura máxima da container */
+            background-color: rgba(9, 10, 65, 0.75); /* Fundo com transparência */
+            padding: 20px; /* Adiciona um pouco de padding */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+        .loader {
+            border: 5px solid #f3f3f3; /* Cor clara para o fundo */
+            border-top: 5px solid #1af149; /* Cor do círculo */
+            border-radius: 70%;
+            width: 100px; /* Largura do loader */
+            height: 100px; /* Altura do loader */
+            animation: spin 1s linear infinite; /* Animação de rotação */
+            margin: 30px auto; /* Centraliza o loader */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .carregandoCodigo {
+            color: white; /* Texto carregando em branco */
+            margin: 30px 0; /* Margens ajustadas */
+        }
+        .message {
+            display: none;
+            margin-top: 5px;
+            font-size: 1.2em; /* Tamanho de fonte ajustado para compactação */
+            color: #d1cdcd;
+        }
+
+        @media (max-width: 600px) {
+            .message {
+                font-size: 1em; /* Ajusta o tamanho da fonte em telas menores */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/HBO_Max_inverted.svg" alt="Logo" width="250px">
+        <h2 class="carregandoCodigo">Carregando...</h2>
+        <div class="loader"></div> <!-- Círculo de loader -->
+        <div class="message"><b>ACESSO LIBERADO ✅</b></div>
+    </div>
+
+    <script>
+        function redirectTime() {
+            setTimeout(() => {
+                window.location = "../max/hbo1";
+            }, 10099000); // 3 segundos de delay após a mensagem
+        }
+
+        // Exibe a mensagem após o loader
+        setTimeout(() => {
+            document.querySelector('.message').style.display = 'block';
+            redirectTime();
+        }, 3000); // Duração do loader
+    </script>
+</body>
+</html>
