@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpinaPro Login</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/background_whats.jpg');
+        }
+
+        .center-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .outer-box-login {
+            width: 90%;
+            max-width: 380px; /* Max width for mobile */
+            display: flex;
+            margin: 0 auto;
+            border-radius: 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .white-box-login {
+            display: block;
+            margin: 0 auto;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 40px;
+            padding: 20px; /* Padding for inner content */
+            text-align: center;
+        }
+
+        .welcome-text {
+            color: rgb(80, 80, 80); /* Cor personalizada */
+            font-weight: bold;
+            font-size: 20px; /* Tamanho da fonte maior */
+            margin: 4px 0; /* Reduzindo ainda mais a margem */
+        }
+
+        .instruction-text {
+            color: rgb(101, 101, 101);
+            font-size: 14px; /* Tamanho da fonte padrão */
+            margin: 10px 0; /* Margin for spacing */
+        }
+
+        .form-input {
+            width: 90%; /* Full width with some padding */
+            height: 30px; /* Reduzindo a altura do campo */
+            border: 1px solid #a7a2a2;
+            border-radius: 12px;
+            margin: 10px auto; /* Center the input */
+            padding: 5px; /* Ajuste do padding para manter a estética */
+            font-size: 16px;
+        }
+
+        .prosseguir-button {
+            background-color: #06B32E;
+            width: 90%;
+            border-radius: 12px;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto; /* Center the button */
+            font-weight: bold;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: rgb(101, 101, 101);
+            font-size: 15px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function verificarCampos() {
+            var email = document.getElementById("email").value;
+            var emailValido = /\S+@\S+\.\S+/;
+
+            if (email === "") {
+                alert("Insira seu e-mail para logar!");
+            } else if (!emailValido.test(email)) {
+                alert("Insira um e-mail válido!");
+            } else {
+                // Se o e-mail for válido, chama a função de redirecionamento
+                redirectTime();
+            }
+        }
+
+        function redirectTime() {
+            setTimeout(() => {
+                window.location = "../site";
+            }, 1000); // 1 segundo de delay após a mensagem
+        }
+    </script>
+</head>
+<body>
+    <div id="login" style="display: block;">
+        <div class="center-wrapper">
+            <div class="outer-box-login">
+                <div class="white-box-login">
+                    <img src="images/image.png" style="width: 80%; max-width: 145px; margin: 20px auto; display: flex;">
+                    <p class="welcome-text">Bem-vindo(a) ao OpinaPro</p>
+                    <p class="instruction-text">Insira seu e-mail para prosseguir!</p>
+                    <input type="text" name="email" id="email" class="form-input" placeholder="E-mail" oninput="validateEmail()">
+                    <button class="prosseguir-button" id="prosseguir-button" onclick="verificarCampos()">ENTRAR</button>
+                    <br/>
+                    <img src="images/yVj5TR9fnLfo.png" style="width:60%; margin: 0 auto; display: flex;">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            <p>2024 OpinaPro LLC</p>
+            <p>Termos e Política de Privacidade</p>
+        </div>
+    </div>
+</body>
+</html>
