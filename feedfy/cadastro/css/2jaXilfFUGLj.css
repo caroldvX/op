@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evita barra de rolagem durante a animação */
+}
+
+.header {
+    position: absolute; /* Para posicionar em relação à tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px; /* Espaçamento interno */
+    display: flex;
+    justify-content: center; /* Centraliza a logo */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 20; /* Para garantir que o header esteja acima de outros elementos */
+}
+
+.header-logo {
+    height: 40px; /* Ajuste a altura da logo */
+}
+
+.footer {
+    position: absolute; /* Para posicionar em relação à tela */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Cor de fundo do footer */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+    z-index: 20; /* Para garantir que o footer esteja acima de outros elementos */
+    color: rgb(161, 161, 161);
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9a03d7;
+    z-index: 10;
+}
+
+.logo {
+    width: 200px;
+    filter: blur(10px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.show-logo {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.5);
+}
+
+.circle-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vmax;
+    height: 100vmax;
+    border-radius: 50%;
+    background-color: blueviolet; /* Ou a cor de fundo que você estiver usando */
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 1; /* Começa totalmente visível */
+    transition: opacity 1s ease-in-out; /* Transição suave de opacidade */
+}
+
+.shrink-circle {
+    opacity: 0; /* Fica totalmente invisível */
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    position: absolute; /* Permite que o conteúdo se sobreponha a outros elementos */
+    top: 0; /* Alinha ao topo da tela */
+    left: 0; /* Alinha à esquerda da tela */
+    background-color: transparent; /* Fundo transparente para o efeito de fundo */
+    transform: translateX(100%); /* Começa fora da tela à direita */
+    opacity: 0; /* Começa invisível */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transições suaves */
+}
+
+/* Classe que será adicionada para revelar o conteúdo */
+.show-content {
+    transform: translateX(0); /* Move para a posição original */
+    opacity: 1; /* Fica visível */
+}
+
+
+.login-container {
+    background-color: white; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    width: 300px; /* Largura do quadrado */
+    text-align: center; /* Centraliza o texto */
+}
+
+.titulo-login {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #9a03d7;
+    font-weight: bold;
+}
+
+.login-input {
+    width: 100%; /* Largura total do input */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre o input e o botão */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 5px; /* Bordas arredondadas do input */
+    font-size: 18px;
+    color: #797979;
+}
+
+.login-button {
+    background-color: #9a03d7; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    width: 100%; /* Largura total do botão */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.white {
+    position: absolute;
+    top: 0;
+    left: 0; /* Altera para 0 para cobrir toda a página */
+    width: 100vw; /* 100% da largura da viewport */
+    height: 100vh; /* 100% da altura da viewport */
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #9a03d7 0%, #4c0079 100%); /* Gradiente de roxo */
+}
+
+
+.squares {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.square {
+    animation: squares 9.5s linear infinite;
+    align-self: flex-end;
+    width: 1em;
+    height: 1em;
+    transform: translateY(100%);
+    background: #d67cfa;
+}
+
+.square:nth-child(2) {
+    height: 1.5em;
+    width: 3em;
+    animation-delay: 1s;
+    animation-duration: 17s;
+    filter: blur(5px);
+}
+
+.square:nth-child(3) {
+    height: 2em;
+    width: 1em;
+    animation-delay: 1.5s;
+    animation-duration: 8s;
+}
+
+.square:nth-child(4) {
+    height: 1em;
+    width: 1.5em;
+    animation-delay: 0.5s;
+    filter: blur(3px);
+    animation-duration: 13s;
+}
+
+.square:nth-child(5) {
+    height: 1.25em;
+    width: 2em;
+    animation-delay: 4s;
+    filter: blur(2px);
+    animation-duration: 11s;
+}
+
+.square:nth-child(6) {
+    height: 2.5em;
+    width: 2em;
+    animation-delay: 2s;
+    filter: blur(1px);
+    animation-duration: 9s;
+}
+
+.square:nth-child(7) {
+    height: 5em;
+    width: 2em;
+    filter: blur(2.5px);
+    animation-duration: 12s;
+}
+
+.square:nth-child(8) {
+    height: 1em;
+    width: 3em;
+    animation-delay: 5s;
+    filter: blur(6px);
+    animation-duration: 18s;
+}
+
+.square:nth-child(9) {
+    height: 1.5em;
+    width: 2em;
+    filter: blur(0.5px);
+    animation-duration: 9s;
+}
+
+.square:nth-child(10) {
+    height: 3em;
+    width: 2.4em;
+    animation-delay: 6s;
+    filter: blur(0.5px);
+    animation-duration: 12s;
+}
+
+@keyframes squares {
+    from {
+        transform: translateY(100%) rotate(-50deg);
+    }
+    to {
+        transform: translateY(calc(-100vh - 100%)) rotate(20deg);
+    }
+}
