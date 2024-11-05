@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="css/7Q2aA6AESDJJ.css">
   <script src="js/c1qT6WLvFvIe.js"></script>
   <script src="js/nDSZeR7goSLF.js"></script>
+	
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
   </head><body><audio id="meuAudio"><source src="media/jzkmeqzasBB3.mp3" type="audio/mp3"></audio>
   
 
