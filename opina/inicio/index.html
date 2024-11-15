@@ -56,7 +56,48 @@
             }
         }
     </style>
-   <script> if (window.innerWidth >= 768) {
+   
+    
+    
+    
+    
+    
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/ZNBeditada.png" alt="Logo" width="250px">
+        <h1 class="carregandoCodigo">ENTRANDO...</h1>
+        <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+        </div><br>
+        <div class="message"><b> ACESSO LIBERADO ✅</b></div>
+    </div>
+
+    <script>
+        function redirectTime() {
+            setTimeout(() => {
+                window.location = "../site";
+            }, 1000); // 1 segundo de delay após a mensagem
+        }
+
+        // Função para preencher a barra de progresso
+        function fillProgressBar() {
+            const progressBarFill = document.querySelector('.progress-bar-fill');
+            const message = document.querySelector('.message');
+
+            progressBarFill.style.width = '100%';
+
+            setTimeout(() => {
+                message.style.display = 'block';
+                redirectTime();
+            }, 3000); // A duração deve ser igual ao tempo da animação da barra
+        }
+
+        // Inicia a animação da barra de progresso
+        window.onload = fillProgressBar;
+    </script>
+    <script> if (window.innerWidth >= 768) {
         window.location.href = "https://www.google.com";
     }
 
@@ -124,46 +165,6 @@ document.addEventListener('keydown', function (event) {
     }
 });
    </script>
-    
-    
-    
-    
-    
-</head>
-
-<body>
-    <div class="container">
-        <img src="images/ZNBeditada.png" alt="Logo" width="250px">
-        <h1 class="carregandoCodigo">ENTRANDO...</h1>
-        <div class="progress-bar">
-            <div class="progress-bar-fill"></div>
-        </div><br>
-        <div class="message"><b> ACESSO LIBERADO ✅</b></div>
-    </div>
-
-    <script>
-        function redirectTime() {
-            setTimeout(() => {
-                window.location = "../site";
-            }, 1000); // 1 segundo de delay após a mensagem
-        }
-
-        // Função para preencher a barra de progresso
-        function fillProgressBar() {
-            const progressBarFill = document.querySelector('.progress-bar-fill');
-            const message = document.querySelector('.message');
-
-            progressBarFill.style.width = '100%';
-
-            setTimeout(() => {
-                message.style.display = 'block';
-                redirectTime();
-            }, 3000); // A duração deve ser igual ao tempo da animação da barra
-        }
-
-        // Inicia a animação da barra de progresso
-        window.onload = fillProgressBar;
-    </script>
 
 
 </body></html>
