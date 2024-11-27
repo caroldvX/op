@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:: Feed-Fy ::</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -189,7 +192,7 @@
     </div>
 
     <div id="produto1">
-        <h4 style="font-size: 22px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
+        <h4 style="font-size: 24px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
         <h1 style="color: #000000be; font-size: 15px; margin-bottom: 4%;">Veja como liberar seu saque assistindo ao vídeo.</h1> 
     </div>   
 
@@ -230,6 +233,59 @@
         <p style="text-align: center; color: rgb(101, 101, 101); font-size: 14px; margin-top: -10px; margin-bottom: 0px;">Termos e Politica de Privacidade</p>
       </div>
 <br>
+
+
+<script>
+    $(document).ready(function onDocumentReady() {
+        var URL_FINAL = '#';
+        var nome = [
+            'Luciana Oliveira', 'Marcia Araújo', 'Carolina Dias', 'Martha', 'Aline Campos', 
+            'Luciane R Freire', 'Simone Z', 'Laura Campos', 'Carla Dias', 'Mariana Ruas', 
+            'Jessica Ribeiro', 'Karol Lia', 'Rafaela Silva', 'Bruna Santos', 'Fernanda Costa', 
+            'Juliana Lima', 'Tatiane Souza', 'Isabela Alves', 'Gabriela Pereira', 'Camila Martins', 
+            'Larissa Rocha', 'Patricia Oliveira', 'Cássia Gomes', 'Suelen Mendes', 'Amanda Costa', 
+            'Letícia Almeida', 'Renata Rocha', 'Carolina Fernandes', 'Tatiane Alves', 'Daniele Lima',
+            'Carlos Silva', 'José Oliveira', 'Felipe Souza', 'Gabriel Pereira', 'Lucas Costa',
+            'Ricardo Santos', 'André Lima', 'Marcos Rocha', 'Pedro Almeida', 'Thiago Dias',
+            'Mateus Martins', 'Rafael Gomes', 'Victor Almeida', 'Lucas Rodrigues', 'Bruno Oliveira'
+        ];
+
+        nome.sort(() => Math.random() - 0.5);
+        var i = 0, qtd = nome.length;
+
+        setInterval(function doThis() {
+            if (i == 11) return; // somente 11 eventos serão disparados
+            
+            // Primeira mensagem
+            toastr.success(nome[i++] + ' acabou de sacar R$ 559.51', {
+                timeOut: 2000,
+                positionClass: "toast-bottom-right",
+                backgroundColor: '#28a745', // Cor verde para o sucesso
+            });
+
+            // Segunda mensagem
+            if (i == 3 || i == 7 || i == 9) {
+                toastr.info(nome[i++] + ' acaba de garantir pagar a a Taxa!', {
+                    timeOut: 2000,
+                    positionClass: "toast-bottom-right",
+                    backgroundColor: '#17a2b8', // Cor azul para informação
+                });
+            }
+
+            // Mensagem adicional (Terceira mensagem)
+            if (i == 5 || i == 12) {
+                toastr.success(nome[i++] + ' acabou de sacar R$ 559.51', {
+                    timeOut: 2000,
+                    positionClass: "toast-bottom-right",
+                    backgroundColor: '#28a745', // Cor amarela para alerta
+                });
+            }
+
+        }, 10 * 1000);   // a cada 10 segundos
+    });
+</script>
+
+
 
     <script>
         function unmuteVideo() {
