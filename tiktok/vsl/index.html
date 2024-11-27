@@ -9,6 +9,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
     <style>
+        
         body {
             display: flex;
             flex-direction: column;
@@ -56,18 +57,19 @@
         }
 
         #logo {
-            width: 100px;
+            width: 130px;
             max-width: 130px;
         }
 
-        .boxSaldo {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            border: 3px solid #ff0150;
-            border-radius: 6px;
-            padding: 5px 10px;
-        }
+        
+.boxSaldo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 5px solid #ff0150;
+    border-radius: 24px;
+    padding: 5px 26px;
+}
 
         .textoSaldo {
             font-size: 12px;
@@ -176,6 +178,7 @@
             }
         }
         
+    
     </style>
 </head>
 <body>
@@ -265,7 +268,7 @@
 
             // Segunda mensagem
             if (i == 3 || i == 7 || i == 9) {
-                toastr.info(nome[i++] + ' acaba de garantir pagar a a Taxa!', {
+                toastr.info(nome[i++] + ' acaba de pagar a a Taxa!', {
                     timeOut: 2000,
                     positionClass: "toast-bottom-right",
                     backgroundColor: '#17a2b8', // Cor azul para informação
