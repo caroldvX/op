@@ -124,6 +124,12 @@
             animation: pulse 2s infinite;
         }
 
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
         @keyframes pulse {
             0% {
                 transform: translateX(-50%) scale(0.85);
@@ -136,7 +142,6 @@
             }
         }
 
-        /* Botão */
         .centralizar {
             width: 100%;
             display: flex;
@@ -161,7 +166,6 @@
             background-color: #e66a00;
         }
 
-        /* Responsividade */
         @media (max-width: 480px) {
             #p1 {
                 flex-direction: row;
@@ -211,7 +215,7 @@
                 video.muted = false;
                 video.currentTime = 0;
                 video.play();
-                thumbnail.classList.add('hidden');
+                thumbnail.classList.add('hidden'); // Esconde a thumbnail ao desmutar
             }
         }
     </script>
