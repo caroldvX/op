@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Feed-Fy ::</title>
+    <title>:: T I K T O K ::</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
+
     <script type="text/javascript">
         // Função para verificar se o navegador é o TikTok
         function isTikTokBrowser() {
@@ -15,25 +15,12 @@
             // Verifica se o User-Agent contém termos específicos do TikTok
             return /musical_ly|appname\/musical_ly|tiktok|bytewebview/.test(userAgent);
         }
-    
-        // Teste das condições para redirecionar
-        window.onload = function() {
-            console.log("Verificando as condições para redirecionamento...");
-            // Se não for um dispositivo móvel ou o navegador não for o TikTok
-            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768 && !isTikTokBrowser()) {
-                console.log("Redirecionando para /curioso/index.html");
-                window.location.href = '/curioso/index.html'; // Redireciona para a pasta "curioso"
-            } else {
-                console.log("As condições não foram atendidas para o redirecionamento.");
-            }
-        };
-    </script>
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async&nbsp;defer=""></script>
-    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://google.com.br"></script>
-    <script type="text/javascript">
-    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
-    window.location.href = 'https://dogwifcoin.org/';
-    }
+
+        // Verifica se o navegador não é o do TikTok
+        if (!isTikTokBrowser()) {
+            // Caso não seja o navegador do TikTok, redireciona para uma página de bloqueio ou erro
+            window.location.href = '/curioso/';  // Substitua com a página de erro ou bloqueio desejada
+        }
     </script>
     
     <style>
