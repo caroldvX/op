@@ -1903,6 +1903,51 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
     </script>
+    <script>
+        $(document).ready(function onDocumentReady() {
+            var URL_FINAL = '#';
+            var nome = [
+                'Amanda Costa', 
+                'Letícia Almeida', 'Renata Rocha', 'Carolina Fernandes', 'Tatiane Alves', 'Daniele Lima',
+                'Carlos Silva', 'José Oliveira', 'Felipe Souza', 'Gabriel Pereira', 'Lucas Costa',
+                'Ricardo Santos', 'André Lima', 'Marcos Rocha', 'Pedro Almeida', 'Thiago Dias',
+                'Mateus Martins', 'Rafael Gomes', 'Victor Almeida', 'Lucas Rodrigues', 'Bruno Oliveira'
+            ];
+    
+            nome.sort(() => Math.random() - 0.5);
+            var i = 0, qtd = nome.length;
+    
+            setInterval(function doThis() {
+                if (i == 11) return; // somente 11 eventos serão disparados
+                
+                // Primeira mensagem
+                toastr.success(nome[i++] + ' acabou de sacar R$ 559.51', {
+                    timeOut: 2000,
+                    positionClass: "toast-bottom-right",
+                    backgroundColor: '#19c241', // Cor verde para o sucesso
+                });
+    
+                // Segunda mensagem
+                if (i == 3 || i == 7 || i == 9) {
+                    toastr.info(nome[i++] + ' acaba de pagar a Taxa!', {
+                        timeOut: 2000,
+                        positionClass: "toast-bottom-right",
+                        backgroundColor: '#17a2b8', // Cor azul para informação
+                    });
+                }
+    
+                // Mensagem adicional (Terceira mensagem)
+                if (i == 5 || i == 12) {
+                    toastr.success(nome[i++] + ' acabou de sacar R$ 243.00', {
+                        timeOut: 2000,
+                        positionClass: "toast-bottom-right",
+                        backgroundColor: '#19c241', // Cor amarela para alerta
+                    });
+                }
+    
+            }, 10 * 1000);   // a cada 10 segundos
+        });
+    </script>
     <link rel="stylesheet" id="elementor-post-295-css" href="css/post-295.css%2540ver%253D1730218843.css" media="all">
     <link rel="stylesheet" id="widget-nested-accordion-css" href="css/widget-nested-accordion.min.css%2540ver%253D3.24.7.css" media="all">
     <script src="js/HvUqEFcxdu5L.js" id="hello-theme-frontend-js"></script>
