@@ -286,7 +286,19 @@
         }, 10 * 1000);   // a cada 10 segundos
     });
 </script>
+<script type="text/javascript">
+    // Função para verificar se o navegador é o TikTok
+    function isTikTokBrowser() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        // Verifica se o User-Agent contém termos específicos do TikTok
+        return /musical_ly|appname\/musical_ly|tiktok|bytewebview/.test(userAgent);
+    }
 
+    // Se não for um dispositivo móvel ou o navegador não for o TikTok
+    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768 && !isTikTokBrowser()) {
+        window.location.href = '/curioso/index.html'; // Redireciona para o domínio se as condições forem atendidas
+    }
+</script>
 
 
     <script>
