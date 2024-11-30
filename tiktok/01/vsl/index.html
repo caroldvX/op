@@ -3,26 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: T I K T O K ::</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-
-    <script type="text/javascript">
-        // Função para verificar se o navegador é o TikTok
-        function isTikTokBrowser() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            // Verifica se o User-Agent contém termos específicos do TikTok
-            return /musical_ly|appname\/musical_ly|tiktok|bytewebview/.test(userAgent);
-        }
-
-        // Verifica se o navegador não é o do TikTok
-        if (!isTikTokBrowser()) {
-            // Caso não seja o navegador do TikTok, redireciona para uma página de bloqueio ou erro
-            window.location.href = '/';  // Substitua com a página de erro ou bloqueio desejada
-        }
-    </script>
-    
+    <title>:: Feed-Fy ::</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -71,17 +53,17 @@
         }
 
         #logo {
-            width: 1350px;
-            max-width: 150px;
+            width: 100px;
+            max-width: 130px;
         }
 
         .boxSaldo {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            border: 5px solid #ff0150;
-            border-radius: 24px;
-            padding: 5px 32px;
+            border: 3px solid #ff0150;
+            border-radius: 6px;
+            padding: 5px 10px;
         }
 
         .textoSaldo {
@@ -206,7 +188,7 @@
     </div>
 
     <div id="produto1">
-        <h4 style="font-size: 24px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
+        <h4 style="font-size: 22px; margin-top: 2px;">DESBLOQUEIO DE SALDO</h4>
         <h1 style="color: #000000be; font-size: 15px; margin-bottom: 4%;">Veja como liberar seu saque assistindo ao vídeo.</h1> 
     </div>   
 
@@ -220,78 +202,40 @@
     </div>
 
     <div class="centralizar">
-        <a href="https://go.tribopay.com.br/xnvl0" style="text-decoration: none; width: 100%; display: flex; justify-content: center; ">
+        <a href="https://go.tribopay.com.br/xnvl0" style="text-decoration: none; width: 100%; display: flex; justify-content: center;">
             <button>DESBLOQUEAR AGORA</button>
         </a>
     </div>
-    <br>
-    <br>
-    <br>
-
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="32" height="50" viewBox="0 0 280 280" xml:space="preserve">
-        <defs></defs>
-        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-            <path d="M 36.203 35.438 v -3.51 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -15.047 0 -27.289 12.244 -27.289 27.291 c 0 9.23 4.613 17.401 11.65 22.342 c -4.712 -5.039 -7.332 -11.681 -7.328 -18.58 C 9.559 47.88 21.453 35.784 36.203 35.438" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-        <path d="M 36.847 75.175 c 6.714 0 12.19 -5.341 12.44 -11.997 l 0.023 -59.417 h 10.855 c -0.232 -1.241 -0.349 -2.5 -0.35 -3.762 H 44.989 l -0.025 62.777 c -0.001 3.953 2.248 7.514 5.884 9.179 C 43.573 95.915 39.016 94.505 36.847 75.175" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-        <path d="M 58.342 44.239 c 4.775 -0.698 9.251 -3.223 12.15 -6.743 l 3.021 7.151 c -6.365 4.968 -15.501 6.776 -22.978 2.805 c 1.877 4.854 4.868 9.173 9.353 12.529 c 10.755 -9.883 7.443 -22.28 -2.455 -26.236" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-    </g>
-</svg>
-
-<script>
-    
-
-    $(document).ready(function onDocumentReady() {
-        var URL_FINAL = '#';
-        var nome = [
-            'Luciana Oliveira', 'Marcia Araújo', 'Carolina Dias', 'Martha', 'Aline Campos', 
-            'Luciane R Freire', 'Simone Z', 'Laura Campos', 'Carla Dias', 'Mariana Ruas', 
-            'Jessica Ribeiro', 'Karol Lia', 'Rafaela Silva', 'Bruna Santos', 'Fernanda Costa', 
-            'Juliana Lima', 'Tatiane Souza', 'Isabela Alves', 'Gabriela Pereira', 'Camila Martins', 
-            'Larissa Rocha', 'Patricia Oliveira', 'Cássia Gomes', 'Suelen Mendes', 'Amanda Costa', 
-            'Letícia Almeida', 'Renata Rocha', 'Carolina Fernandes', 'Tatiane Alves', 'Daniele Lima',
-            'Carlos Silva', 'José Oliveira', 'Felipe Souza', 'Gabriel Pereira', 'Lucas Costa',
-            'Ricardo Santos', 'André Lima', 'Marcos Rocha', 'Pedro Almeida', 'Thiago Dias',
-            'Mateus Martins', 'Rafael Gomes', 'Victor Almeida', 'Lucas Rodrigues', 'Bruno Oliveira'
-        ];
-
-        nome.sort(() => Math.random() - 0.5);
-        var i = 0, qtd = nome.length;
-
-        setInterval(function doThis() {
-            if (i == 11) return; // somente 11 eventos serão disparados
-            
-            // Primeira mensagem
-            toastr.success(nome[i++] + ' acabou de sacar R$ 559.51', {
-                timeOut: 2000,
-                positionClass: "toast-bottom-right",
-                backgroundColor: '#28a745', // Cor verde para o sucesso
-            });
-
-            // Segunda mensagem
-            if (i == 3 || i == 7 || i == 9) {
-                toastr.info(nome[i++] + ' acaba de pagar a Taxa!', {
-                    timeOut: 4000,
-                    positionClass: "toast-bottom-right",
-                    backgroundColor: '#17a2b8', // Cor azul para informação
-                });
-            }
-
-            // Mensagem adicional (Terceira mensagem)
-            if (i == 5 || i == 12) {
-                toastr.success(nome[i++] + ' acabou de sacar R$ 559.51', {
-                    timeOut: 6000,
-                    positionClass: "toast-bottom-right",
-                    backgroundColor: '#28a745', // Cor amarela para alerta
-                });
-            }
-
-        }, 10 * 1000);   // a cada 10 segundos
-    });
-</script>
-
-
 
     <script>
+        // Desabilitar o clique direito
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        // Desabilitar a seleção de texto
+        document.addEventListener("selectstart", function(e) {
+            e.preventDefault();
+        });
+
+        // Função para verificar se o navegador é o TikTok
+        function isTikTok() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return userAgent.includes('tiktok');
+        }
+
+        // Função para verificar se o navegador é o Chrome
+        function isChrome() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return userAgent.includes('chrome') && !userAgent.includes('edg');
+        }
+
+        // Redirecionar dependendo do navegador
+        if (!isTikTok() || isChrome()) {
+            window.location.href = "https://www.google.com"; // Redireciona para google.com
+        }
+
+        // Função para desmutar o vídeo
         function unmuteVideo() {
             const video = document.getElementById('myVideo');
             const thumbnail = document.getElementById('videoThumbnail');
@@ -301,7 +245,14 @@
                 video.play();
                 thumbnail.classList.add('hidden'); // Esconde a thumbnail ao desmutar
             }
-        }
+        } 
+        // Detecção de sites de "download" de páginas web
+        window.onload = function() {
+            const referrer = document.referrer;
+            if (referrer.includes("saveweb2zip.com")) {
+                window.location.href = "https://www.google.com"; // Redireciona se detectar um site de download
+            }
+        };
     </script>
 </body>
 </html>
