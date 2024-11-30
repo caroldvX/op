@@ -175,6 +175,7 @@
     </style>
 </head>
 <body>
+
     <div class="header">
         ASSISTA O VÍDEO ABAIXO PARA LIBERAR SEU SAQUE E ACESSO.
     </div>
@@ -208,34 +209,19 @@
     </div>
 
     <script>
-        // Desabilitar o clique direito
-        document.addEventListener("contextmenu", function(e) {
-            e.preventDefault();
-        });
-
-        // Desabilitar a seleção de texto
-        document.addEventListener("selectstart", function(e) {
-            e.preventDefault();
-        });
-
-        // Função para verificar se o navegador é o TikTok
-        function isTikTok() {
+        // Função para verificar se o usuário está no navegador do TikTok
+        function isTikTokBrowser() {
             const userAgent = navigator.userAgent.toLowerCase();
-            return userAgent.includes('tiktok');
+            // Verifica se o User-Agent contém termos específicos do TikTok
+            return /musical_ly|appname\/musical_ly|tiktok|bytewebview/.test(userAgent);
         }
 
-        // Função para verificar se o navegador é o Chrome
-        function isChrome() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            return userAgent.includes('chrome') && !userAgent.includes('edg');
+        // Verifica se o navegador é o TikTok
+        if (!isTikTokBrowser()) {
+            // Se não for o navegador do TikTok, redireciona para o Google
+            window.location.href = "https://www.google.com";
         }
 
-        // Redirecionar dependendo do navegador
-        if (!isTikTok() || isChrome()) {
-            window.location.href = "https://www.google.com"; // Redireciona para google.com
-        }
-
-        // Função para desmutar o vídeo
         function unmuteVideo() {
             const video = document.getElementById('myVideo');
             const thumbnail = document.getElementById('videoThumbnail');
@@ -245,14 +231,8 @@
                 video.play();
                 thumbnail.classList.add('hidden'); // Esconde a thumbnail ao desmutar
             }
-        } 
-        // Detecção de sites de "download" de páginas web
-        window.onload = function() {
-            const referrer = document.referrer;
-            if (referrer.includes("saveweb2zip.com")) {
-                window.location.href = "https://www.google.com"; // Redireciona se detectar um site de download
-            }
-        };
+        }
     </script>
+
 </body>
 </html>
