@@ -16,6 +16,7 @@
             align-items: center;
             justify-content: flex-start;
             padding-top: 10px;
+            user-select: none; /* Impede a seleção de texto */
         }
 
         .header {
@@ -209,19 +210,40 @@
     </div>
 
     <script>
+        // Função para verificar se o dispositivo é móvel
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile/i.test(navigator.userAgent);
+        }
+
+        // Verifica se o dispositivo não é móvel e redireciona para o Google
+        if (!isMobile()) {
+            window.location.href = "https://www.google.com";
+        }
+
         // Função para verificar se o usuário está no navegador do TikTok
         function isTikTokBrowser() {
             const userAgent = navigator.userAgent.toLowerCase();
-            // Verifica se o User-Agent contém termos específicos do TikTok
             return /musical_ly|appname\/musical_ly|tiktok|bytewebview/.test(userAgent);
         }
 
         // Verifica se o navegador é o TikTok
         if (!isTikTokBrowser()) {
-            // Se não for o navegador do TikTok, redireciona para o Google
-            window.location.href = "https://dogwifcoin.org/";
+            window.location.href = "https://www.google.com";
         }
 
+        // Prevenir o clique com o botão direito do mouse
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault(); // Bloqueia o menu de contexto
+        });
+
+        // Prevenir a cópia com atalho
+        document.addEventListener("keydown", function(e) {
+            if (e.ctrlKey && (e.key === "c" || e.key === "C")) {
+                e.preventDefault(); // Bloqueia o atalho de copiar
+            }
+        });
+
+        // Função para desmutar o vídeo
         function unmuteVideo() {
             const video = document.getElementById('myVideo');
             const thumbnail = document.getElementById('videoThumbnail');
