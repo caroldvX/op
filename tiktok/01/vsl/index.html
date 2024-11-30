@@ -210,6 +210,30 @@
     </div>
 
     <script>
+        function isScrapingTool() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const referrer = document.referrer.toLowerCase();
+
+    // Lista de possíveis User-Agents de scraping tools ou referers de ferramentas
+    const scrapingUserAgents = [
+        "saveweb2zip", "web2zip", "site-downloader", "wget", "curl", "httrack"
+    ];
+
+    // Verifica se o User-Agent ou o Referer contém termos que indicam uma ferramenta de scraping
+    for (let agent of scrapingUserAgents) {
+        if (userAgent.includes(agent) || referrer.includes(agent)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+if (isScrapingTool()) {
+    // Redireciona para uma página de erro ou altere o conteúdo
+    window.location.href = "https://www.google.com"; // ou outra página de redirecionamento
+}
+
         // Função para verificar se o dispositivo é móvel
         function isMobile() {
             return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile/i.test(navigator.userAgent);
